@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Análisis numérico</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Calcular con números de máquina y saber cuánto se equivoca el resultado: errores y punto flotante, raíces de ecuaciones, interpolación y aproximación, derivación e integración numéricas, diferencias finitas, sistemas lineales y problemas de valor inicial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html">Análisis <b>numérico</b></a><span class="eyebrow">Curso visual e interactivo · Matemática</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<p class="aviso-curado" role="note">El material de Matemática está en proceso de curado: puede tener errores.</p>
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Matemática</span>
+  <h1>Toda respuesta numérica es una aproximación; este curso enseña a medir cuánto</h1>
+  <p class="lede">La computadora no conoce √2, ni π, ni la integral de la campana de Gauss: solo sabe sumar y multiplicar números con dieciséis cifras. Con eso hay que encontrar raíces, interpolar tablas, integrar y resolver sistemas, y decir con un teorema cuánto puede fallar el resultado. Este curso construye cada método, demuestra su error y lo pone a correr frente a ti.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 14 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de matemática, estadística, ciencias actuariales e ingeniería que ya manejan derivadas, integrales, el teorema de Taylor y las matrices. Conviene leer antes Cálculo en una variable y Álgebra lineal: aquí se usan sin repetirlos.</p>
+    <p><b>Cómo está hecho.</b> Un mismo problema recorre el curso: calcular la función de distribución normal Φ(x) y sus cuantiles, que no tienen fórmula cerrada. Se evalúa con series y se descubre el error de redondeo, se invierte con Newton, se interpola de una tabla, se aproxima con polinomios y fracciones racionales y se integra con cuadraturas. Los laboratorios dejan mover los nodos, el paso y la tolerancia y mirar crecer o caer el error. Las prácticas usan Python con NumPy, SciPy y SymPy, o R. Ningún curso del grafo lo exige como requisito, pero sus métodos reaparecen en Simulación, Matemática financiera y Finanzas cuantitativas.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> El error</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="teoria-de-errores"><span class="n">01</span><b>Teoría de los errores</b><p>Los tipos de error de un cálculo, cómo se miden y por qué un problema mal condicionado no se arregla con un buen algoritmo.</p></div>
+    <div class="mod soon" data-id="punto-flotante"><span class="n">02</span><b>Representación en punto flotante y error de redondeo</b><p>Cómo guarda la máquina los números reales, qué es el épsilon de máquina y qué leyes de la aritmética deja de cumplir.</p></div>
+    <div class="mod soon" data-id="convergencia-y-aceleracion"><span class="n">03</span><b>Velocidad de convergencia y error de truncamiento</b><p>Medir qué tan rápido se acerca una sucesión a su límite y acelerarla con el método de Aitken y la extrapolación de Richardson.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Ecuaciones no lineales</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="raices-de-una-variable"><span class="n">04</span><b>Ecuaciones no lineales de una variable</b><p>Bisección, punto fijo, Newton y secante, con su teorema de convergencia y su orden.</p></div>
+    <div class="mod soon" data-id="raices-de-polinomios"><span class="n">05</span><b>Raíces de polinomios reales</b><p>Evaluar con Horner, acotar y separar raíces, deflactar y encontrar raíces complejas con el método de Muller.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Interpolar y aproximar</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="interpolacion-polinomica"><span class="n">06</span><b>Interpolación polinómica: Lagrange y Newton</b><p>Existencia y unicidad del polinomio interpolante, sus dos formas de escribirlo y la fórmula del error.</p></div>
+    <div class="mod soon" data-id="hermite-y-splines"><span class="n">07</span><b>Interpolación de Hermite, splines cúbicos y dos variables</b><p>Interpolar también las derivadas, unir polinomios de grado bajo con suavidad y llevar la idea a tablas de dos entradas.</p></div>
+    <div class="mod soon" data-id="aproximacion-por-minimos-cuadrados"><span class="n">08</span><b>Teoría de la aproximación: la norma cuadrática</b><p>La mejor aproximación en la norma cuadrática, discreta y continua, y los polinomios ortogonales que la hacen estable.</p></div>
+    <div class="mod soon" data-id="aproximacion-uniforme-y-racional"><span class="n">09</span><b>Aproximación uniforme, economización de Chebyshev y aproximantes de Padé</b><p>La mejor aproximación en la norma infinita, cómo recortar una serie sin perder precisión y las fracciones racionales que usan las bibliotecas.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Derivar, integrar y sumar</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="derivacion-numerica"><span class="n">10</span><b>Derivación numérica</b><p>Fórmulas de diferencias a partir de la interpolación y el equilibrio entre el error de truncamiento y el de redondeo.</p></div>
+    <div class="mod soon" data-id="integracion-numerica"><span class="n">11</span><b>Integración numérica: de Newton-Cotes a Gauss</b><p>Trapecio, Simpson, reglas compuestas, Romberg y cuadratura gaussiana, cada una con su error demostrado.</p></div>
+    <div class="mod soon" data-id="diferencias-finitas"><span class="n">12</span><b>Diferencias finitas y ecuaciones en diferencias</b><p>El cálculo de los operadores Δ, ∇ y E, la suma como antidiferencia y la teoría de las ecuaciones lineales en diferencias.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-5" open><summary><h2><span class="pn">Parte 5</span> Sistemas y evolución en el tiempo</h2><span class="cuenta" data-etapa-cuenta="5"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="sistemas-lineales-numericos"><span class="n">13</span><b>Sistemas lineales en la máquina</b><p>Eliminación con pivoteo, factorizaciones LU y de Cholesky, número de condición y métodos iterativos.</p></div>
+    <div class="mod soon" data-id="problemas-de-valor-inicial"><span class="n">14</span><b>Problemas de valor inicial: Euler, Runge-Kutta y estabilidad</b><p>Seguir la solución de y′ = f(t, y) paso a paso, con el error local, el global y la región de estabilidad.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/mate-analisis-numerico" target="_blank" rel="noopener">github.com/aaramirez/mate-analisis-numerico</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
